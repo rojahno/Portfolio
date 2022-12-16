@@ -4,17 +4,13 @@
     box-sizing: border-box;
 }
 
-body > #root > .app {
-    /* height: 100vh; */
-    /* width: 100vw; */
-}
-
 body {
     font-family: "Ubuntu", sans-serif;
     font-family: "Anton", sans-serif;
     color: #333336;
-    background-color: #1682ad;
-    background-color: #040026;
+    background-color: #1d1d20;
+    /* background-color: #1682ad; */
+    /* background-color: #040026; */
     opacity: 0.8;
     /* background-image: linear-gradient(#f9f9f9 1px, transparent 1px), */
     /* linear-gradient(to right, #f9f9f9 1px, #aedfb5 1px); */

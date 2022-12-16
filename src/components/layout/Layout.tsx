@@ -1,4 +1,6 @@
 import "./Layout.css";
+import stack from "../../assets/stack.svg";
+
 interface LayoutProps {
     children?: React.ReactNode;
 }
@@ -6,7 +8,8 @@ interface LayoutProps {
 export const Layout = (props: LayoutProps) => {
     return (
         <section className="layout">
-           {props.children}
+            {props.children}
+            <img className="stack" src={stack} alt={"stack"} />
         </section>
     );
 };

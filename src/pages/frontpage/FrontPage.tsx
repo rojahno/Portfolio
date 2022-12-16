@@ -1,31 +1,30 @@
+import { AboutMe } from "../../components/AboutMe/AboutMe";
 import { Header } from "../../components/header/Header";
 import { Layout } from "../../components/layout/Layout";
 import { BrowserWindow } from "../../components/mainBrowser/BrowserWindow";
 import { Profile } from "../../components/profile/Profile";
+import { Sectiontitle } from "../../components/title/SectionTitle";
 import "./FrontPage.css";
 
 export const FrontPage = () => {
     return (
-        <div>
+        <div className="frontpage">
             <Layout>
                 <Header />
                 <Profile />
             </Layout>
 
             <Layout>
-                <BrowserWindow backgroundColor="#00f3fc"></BrowserWindow>
+                <Sectiontitle text={"About Me"} />
+                <AboutMe />
             </Layout>
 
             <Layout>
-                <BrowserWindow backgroundColor="#ffbcff"></BrowserWindow>
+                <Sectiontitle text={"Technology"} />
             </Layout>
 
             <Layout>
-                <BrowserWindow backgroundColor="#d569f6"></BrowserWindow>
-            </Layout>
-
-            <Layout>
-                <BrowserWindow backgroundColor="#6c1fd3"></BrowserWindow>
+                <Sectiontitle text={"Projects"} />
             </Layout>
         </div>
     );

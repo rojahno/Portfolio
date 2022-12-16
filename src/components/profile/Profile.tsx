@@ -17,6 +17,10 @@ export const Profile = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, mollitia labore enim obcaecati
                     deleniti veniam.
                 </div>
+                <div className="button-container">
+                    <button className="profile-button">About me</button>
+                    <button className="profile-button">Contact me</button>
+                </div>
             </div>
         </div>
     );
