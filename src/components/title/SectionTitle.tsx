@@ -4,5 +4,5 @@ interface TitleProps {
 }
 
 export const Sectiontitle = (props: TitleProps) => {
-    return <div className="section-title">{props.text}</div>;
+    return <h2 className="section-title">{props.text}</h2>;
 };

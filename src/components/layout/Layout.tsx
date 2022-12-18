@@ -7,8 +7,8 @@ interface LayoutProps {
 
 export const Layout = (props: LayoutProps) => {
     return (
-        <section className="layout">
-            {props.children}
+        <section className="layout-container">
+            <div className="layout">{props.children}</div>
             <div className="stack-container">
                 <img className="stack" src={stack} alt={"stack"} />
             </div>

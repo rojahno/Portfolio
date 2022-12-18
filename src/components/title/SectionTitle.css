@@ -2,8 +2,7 @@
     text-transform: capitalize;
     text-align: center;
     position: relative;
-    padding-left: 45px;
-    padding-right: 45px;
+
     font-size: 2em;
     margin-top: 2em;
     background-image: linear-gradient(45deg, #f14d5c, #f3903f, #fdc70c);

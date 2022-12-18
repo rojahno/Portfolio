@@ -1,9 +1,10 @@
 .layout {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding-bottom: 4rem;
 }
 .stack-container {
     width: 100%;

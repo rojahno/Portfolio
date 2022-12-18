@@ -1,6 +1,10 @@
-.layout:nth-child(even) {
+.layout-container:nth-child(even) {
     background: #00000020;
 }
-.layout:last-child .stack-container:last-child .stack {
+.layout-container:last-child .stack-container:last-child .stack {
     display: none;
+}
+
+.layout-container:first-child .layout {
+    min-height: 100vh;
 }

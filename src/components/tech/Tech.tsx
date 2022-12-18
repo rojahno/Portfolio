@@ -22,7 +22,6 @@ export const Tech = () => {
         <div className="tech-container">
             <div className="main-icon-container">
                 <img className="main-icon" src={currentIcon} alt="html icon" />
-                {/* <p className="tech-icon-text">{currentText}</p> */}
             </div>
             <div className="tech">
                 <img
