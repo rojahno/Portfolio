@@ -10,7 +10,7 @@ const rojoText =
     "react components. The goal of the project was to learn more about React and to " +
     "create reusable components that I could use for the future.";
 const aStarText =
-    "An A-start pathfinding algorithm. The algorithm navigates the Studentersamfund " +
+    "An A-star pathfinding algorithm. The algorithm navigates the Studentersamfund " +
     "to find your friend in one of the rooms. This project is from the Introduction " +
     "to artifical intelligence course TDT4136.";
 

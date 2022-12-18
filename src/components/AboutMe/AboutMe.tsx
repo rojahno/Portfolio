@@ -1,6 +1,6 @@
 import "./AboutMe.css";
 
-const ageText = "My name is Andreas Sunde and i'm 26 year old.";
+const ageText = "My name is Andreas Sunde and i'm 26 years old.";
 const educationText =
     "I have a bachelor degree in computer science from NTNU, where i " +
     "wrote about EEG equpiment and how to use it to help ALS patients. I am " +
