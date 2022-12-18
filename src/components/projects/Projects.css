@@ -33,6 +33,7 @@
 }
 
 .project-image {
+    margin-top: 1em;
     width: 125px;
     border-radius: 10px;
 
@@ -41,11 +42,13 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .gihub-button {
+    justify-self: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 2.5em;
+    /* width: 10em; */
     border-radius: 0.5em;
     border: solid 1px #fff;
     background-color: #fff;
@@ -62,8 +65,44 @@
     cursor: pointer;
     padding: 1em;
 }
+
+.project-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .github-icon {
     width: 25px;
     height: 25px;
     margin-right: 0.5rem;
+}
+
+@media only screen and (min-width: 480px) {
+    .project-container {
+        max-width: 480px;
+    }
+    .project {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1em;
+    }
+    .project-content-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .project:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+    .project:nth-child(even) .project-content-container .project-title {
+        background-image: linear-gradient(45deg, #fdc70c, #f3903f, #f14d5c);
+    }
+    .project:nth-child(even) .project-content-container .gihub-button {
+        background-image: linear-gradient(45deg, #fdc70c, #f3903f, #f14d5c);
+    }
+    .project:nth-child(even) .project-content-container {
+        align-items: flex-end;
+    }
 }
