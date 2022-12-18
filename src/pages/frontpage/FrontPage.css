@@ -1,4 +1,6 @@
 .layout:nth-child(even) {
     background: #00000020;
-    /* border: solid 1px #fff; */
+}
+.layout:last-child .stack-container:last-child .stack {
+    display: none;
 }

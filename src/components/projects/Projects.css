@@ -1,0 +1,69 @@
+.project-container {
+    max-width: 325px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.project {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(45deg, #f14d5c, #f3903f, #fdc70c);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.project-image {
+    width: 125px;
+    border-radius: 10px;
+
+    /* fit cover */
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.gihub-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 2.5em;
+    border-radius: 0.5em;
+    border: solid 1px #fff;
+    background-color: #fff;
+    color: #040026;
+    font-size: 1em;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, #f14d5c, #f3903f, #fdc70c);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    cursor: pointer;
+    padding: 1em
+}
+.github-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.5rem;
+}

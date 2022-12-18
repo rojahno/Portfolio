@@ -9,7 +9,9 @@ export const Layout = (props: LayoutProps) => {
     return (
         <section className="layout">
             {props.children}
-            <img className="stack" src={stack} alt={"stack"} />
+            <div className="stack-container">
+                <img className="stack" src={stack} alt={"stack"} />
+            </div>
         </section>
     );
 };

@@ -11,8 +11,8 @@
     position: absolute;
     width: 80px;
     height: 80px;
-    border-color: white; /* or whatever colour */
-    border-style: solid; /* or whatever style */
+    border-color: white;
+    border-style: solid;
     content: " ";
     padding: 1em;
 }
@@ -59,9 +59,10 @@
 .text-container {
     width: 100%;
     gap: 1em;
-    font-size: 0.8em;
-    text-align: start;
-    color: #fff;
+    font-size: 0.8rem;
+
+    overflow-wrap: break-word;
+    text-align: justify;
 }
 .profile-name {
     gap: 1em;
