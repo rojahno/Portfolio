@@ -1,5 +1,5 @@
 {
-    "homepage": "https://rojahno.github.io/portfolio/",
+    "homepage": "https://rojahno.github.io/Portfolio/",
     "name": "portfolio",
     "version": "0.1.0",
     "private": true,
@@ -23,7 +23,8 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "predeploy": "yarn run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d build",
+        "format": "prettier --write ."
     },
     "eslintConfig": {
         "extends": [
