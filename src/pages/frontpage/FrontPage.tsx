@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { AboutMe } from "../../components/AboutMe/AboutMe";
 import { Header } from "../../components/header/Header";
 import { Layout } from "../../components/layout/Layout";
@@ -8,25 +9,29 @@ import { Sectiontitle } from "../../components/title/SectionTitle";
 import "./FrontPage.css";
 
 export const FrontPage = () => {
+    const aboutMeRef = useRef<HTMLDivElement>(null);
+    const techRef = useRef<HTMLDivElement>(null);
+    const projectsRef = useRef<HTMLDivElement>(null);
+
     return (
         <div className="frontpage">
             <Layout>
-                <Header />
+                <Header aboutMeRef={aboutMeRef} projectsRef={projectsRef} techRef={techRef} />
                 <Profile />
             </Layout>
 
             <Layout>
-                <Sectiontitle text={"About Me"} />
+                <Sectiontitle forwardedRef={aboutMeRef} text={"About Me"} />
                 <AboutMe />
             </Layout>
 
             <Layout>
-                <Sectiontitle text={"Technology"} />
+                <Sectiontitle forwardedRef={techRef} text={"Technology"} />
                 <Tech />
             </Layout>
 
             <Layout>
-                <Sectiontitle text={"Projects"} />
+                <Sectiontitle forwardedRef={projectsRef} text={"Projects"} />
                 <Projects />
             </Layout>
         </div>

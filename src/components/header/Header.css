@@ -25,27 +25,27 @@
 
 .menu-icon {
     color: #fff;
-    width: 3em;
+    width: 2em;
     margin-right: 1.5em;
 }
 
 .navbar {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: space-between;
-    padding: 1em;
+    align-items: center;
 }
 
 .nav {
-    padding: 1em;
-    display: inline-block;
+    height: 100%;
     position: relative;
-    color: #00f3fc;
+    color: #fff;
 }
+
 .nav:hover {
-    color: #ffbcff;
+    color: #f3903f;
     cursor: pointer;
 }
 
@@ -57,7 +57,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ffbcff;
+    background-color: #f3903f;
     transform-origin: bottom center;
     transition: transform 0.25s ease-out;
 }
@@ -65,4 +65,19 @@
 .nav:hover::after {
     transform: scaleX(1);
     transform-origin: bottom center;
+}
+
+@media only screen and (max-width: 630px) {
+    .navbar {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 630px) {
+    .navbar {
+        display: flex;
+    }
+    .menu-icon {
+        display: none;
+    }
 }

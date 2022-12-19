@@ -12,7 +12,7 @@ import { useState } from "react";
 
 export const Tech = () => {
     const [currentIcon, setCurrentIcon] = useState<string>(htmlIcon);
-    const [currentText, setCurrentText] = useState<string>("HTML");
+    // const [currentText, setCurrentText] = useState<string>("HTML");
 
     const handleIconChange = (icon: string) => {
         setCurrentIcon(icon);

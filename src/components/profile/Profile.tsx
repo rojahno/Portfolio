@@ -1,5 +1,7 @@
 import userProfileIcon from "../../assets/user-profile-icon.svg";
 import "./Profile.css";
+import linkedIn from "../../assets/linkedin.svg";
+import gituhb from "../../assets/github.svg";
 
 const profileText = "Computer science student at NTNU in Trondheim, Norway.";
 
@@ -17,8 +19,15 @@ export const Profile = () => {
                 </div>
                 <p className="text-container">{profileText}</p>
                 <div className="button-container">
-                    <button className="profile-button">About me</button>
-                    <button className="profile-button">Contact me</button>
+                    <a
+                        href="https://www.linkedin.com/in/andreas-rojahn-sunde-64024521a/"
+                        target="_blank"
+                        rel="noreferrer">
+                        <img src={linkedIn} className="profile-button" alt="linkedin" />
+                    </a>
+                    <a href="https://github.com/rojahno" target="_blank" rel="noreferrer">
+                        <img src={gituhb} className="profile-button" alt="github" />
+                    </a>
                 </div>
             </div>
         </div>
