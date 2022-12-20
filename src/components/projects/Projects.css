@@ -67,6 +67,9 @@
     cursor: pointer;
     padding: 1em;
 }
+.gihub-button:hover {
+ transform: scale(1.05);
+}
 
 .project-content-container {
     width: 100%;
