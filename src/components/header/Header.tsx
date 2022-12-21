@@ -1,6 +1,5 @@
 import "./Header.css";
-import hamburgerMenu from "../../assets/menu_icon.svg";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MenuIcon } from "../menuIcon/MenuIcon";
 
 interface HeaderProps {
@@ -15,6 +14,14 @@ export const Header = (props: HeaderProps) => {
     const [isNavShowing, setIsNavShowing] = useState(false);
 
     const [contentHeight, setContentHeight] = useState("0px");
+
+    function closeOnClick() {
+        if (isNavShowing) {
+            toggleNav();
+        }
+    }
+
+    useOnClickOutside(homeRef, () => closeOnClick());
 
     const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
         if (ref.current) {
@@ -74,8 +81,6 @@ export const Header = (props: HeaderProps) => {
                 </div>
             </ul>
 
-            <MenuIcon onClick={toggleNav} />
-            {/* <img className="menu-icon" src={hamburgerMenu} alt="hamburger menu" onClick={toggleNav} /> */}
             <ul
                 className="navbar-mobile"
                 ref={dropdown}
@@ -112,6 +117,25 @@ export const Header = (props: HeaderProps) => {
                     Projects
                 </div>
             </ul>
+            <MenuIcon onClick={toggleNav} checked={isNavShowing} />
         </div>
     );
 };
+
+function useOnClickOutside(ref: any, handleOutsideClick: (event: Event) => any) {
+    useEffect(() => {
+        const listener = (event: Event) => {
+            // Do nothing if clicking ref's element or descendent elements
+            if (!ref.current || ref.current.contains(event.target)) {
+                return;
+            }
+            handleOutsideClick(event);
+        };
+        document.addEventListener("mousedown", listener);
+        document.addEventListener("touchstart", listener);
+        return () => {
+            document.removeEventListener("mousedown", listener);
+            document.removeEventListener("touchstart", listener);
+        };
+    }, [ref, handleOutsideClick]);
+}
