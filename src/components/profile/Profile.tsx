@@ -10,7 +10,7 @@ export const Profile = () => {
         <div className="profile">
             <div className="profile-container">
                 <div className="img-container">
-                    <img className="profile-image" src={userProfileIcon} alt="" />
+                    <img className="profile-image" src={"https://media.licdn.com/dms/image/C4D03AQE1H0qY-xk5Lw/profile-displayphoto-shrink_400_400/0/1629375366199?e=1677110400&v=beta&t=rHix3_EAm6Ze1H8rvMDDIKB3QAoPKxEGTUU3CSYpwAM"} alt="" />
                     <h2 className="profile-name">
                         HELLO,
                         <br />

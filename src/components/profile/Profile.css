@@ -3,8 +3,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2em;
+    padding: 1.4em;
     animation: fadeIn 2s ease-in;
+    width: 325px;
 }
 
 .profile:before,
@@ -48,8 +49,11 @@
     border-radius: 50%;
     object-fit: cover;
     background-color: transparent;
-    border: solid 5px #fff;
+    border: solid 1px #fff;
     border-radius: 50%;
+
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
 
 .img-container {
@@ -61,11 +65,11 @@
 }
 
 .profile-name {
-    margin: 0;
-    gap: 1em;
     margin-left: 1em;
-    font-size: 1.2em;
-    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: justify;
+    width: 100%;
+    /* text-align: center; */
     text-overflow: inherit;
     justify-self: center;
     background-color: #f3ec78;
@@ -105,6 +109,12 @@
 }
 
 @media only screen and (min-width: 480px) {
+    .profile {
+        width: 480px;
+    }
+    .profile-name {
+        text-align: start;
+    }
     .profile-name {
         font-size: 2em;
     }
