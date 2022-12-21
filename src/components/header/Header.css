@@ -23,12 +23,6 @@
     padding: 0em 0.3em;
 }
 
-.menu-icon {
-    color: #fff;
-    width: 2em;
-    margin-right: 1.5em;
-}
-
 .navbar-mobile {
     position: absolute;
     top: 100%;
@@ -44,6 +38,9 @@
     margin: 0;
     gap: 2rem;
     padding: 1em 0;
+    transition: max-height 0.3s ease-in;
+    z-index: 0;
+    overflow: hidden;
 }
 
 .nav {
@@ -97,10 +94,21 @@
         margin: 0;
         padding: 1em 0;
     }
-    .menu-icon {
+    .hamburger {
         display: none;
     }
     .navbar-mobile {
         display: none;
+    }
+}
+
+@keyframes visibleTopToBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
