@@ -4,7 +4,6 @@
     color: #fff;
     background-color: #1d1d22;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0.5em;
@@ -39,7 +38,6 @@
     gap: 2rem;
     padding: 1em 0;
     transition: max-height 0.3s ease-in;
-    z-index: 0;
     overflow: hidden;
 }
 
@@ -99,16 +97,5 @@
     }
     .navbar-mobile {
         display: none;
-    }
-}
-
-@keyframes visibleTopToBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
