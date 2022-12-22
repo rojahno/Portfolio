@@ -8,7 +8,8 @@ import reactIcon from "../../assets/reactjs.svg";
 import typescriptIcon from "../../assets/typescript.svg";
 import python from "../../assets/python.svg";
 import postsqlIcon from "../../assets/pgsql.svg";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useInView } from "framer-motion";
 
 export const Tech = () => {
     const [currentIcon, setCurrentIcon] = useState<string>(htmlIcon);
@@ -17,9 +18,18 @@ export const Tech = () => {
     const handleIconChange = (icon: string) => {
         setCurrentIcon(icon);
     };
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref, { once: true });
 
     return (
-        <div className="tech-container">
+        <div
+            ref={ref}
+            className="tech-container"
+            style={{
+                transform: isInView ? "none" : "translateX(-20px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}>
             <div className="main-icon-container">
                 <img className="main-icon" src={currentIcon} alt="html icon" />
             </div>

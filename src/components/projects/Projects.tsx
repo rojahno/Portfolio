@@ -4,6 +4,8 @@ import aStar from "../../assets/aStar.png";
 import bachelor from "../../assets/bachelor.png";
 
 import github from "../../assets/github.svg";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 const rojoText =
     "This is a hobby project where I have created some commonly used " +
@@ -20,9 +22,25 @@ const bachelorText =
     "to perform simple tasks and communicate with the people around them using the Emotiv Epoc X Headset";
 
 export const Projects = () => {
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref, { once: true });
+
     return (
-        <div className="project-container">
-            <div className="project">
+        <div
+            ref={ref}
+            className="project-container"
+            style={{
+                transform: isInView ? "none" : "translateX(-20px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}>
+            <div
+                className="project"
+                style={{
+                    transform: isInView ? "none" : "translateX(-20px)",
+                    opacity: isInView ? 1 : 0,
+                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                }}>
                 <img className="project-image" src={rojo} alt="rojo component library" />
                 <div className="project-content-container">
                     <h2 className="project-title">Rojo component library</h2>

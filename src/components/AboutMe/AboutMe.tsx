@@ -1,3 +1,5 @@
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 import "./AboutMe.css";
 
 const ageText = "My name is Andreas Sunde and i'm 26 years old.";
@@ -13,8 +15,17 @@ const workText =
 const hobbyText = "Apart from work and school, I like to spend time with my friends and work out.  ";
 
 export const AboutMe = () => {
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref, { once: true });
     return (
-        <div className="about-me">
+        <div
+            ref={ref}
+            className="about-me"
+            style={{
+                transform: isInView ? "none" : "translateX(-20px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}>
             <p className="about-text">{ageText}</p>
             <p className="about-text">{educationText}</p>
             <p className="about-text">{workText}</p>

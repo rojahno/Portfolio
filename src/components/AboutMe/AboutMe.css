@@ -2,22 +2,4 @@
     max-width: 325px;
     margin: 0 auto;
     margin-top: 1rem;
-    animation: fadeInLeft 2s ease-in-out;
-}
-
-@media only screen and (min-width: 480px) {
-    .about-me {
-        max-width: 400px;
-    }
-}
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-        /* transform: translateX(20px); */
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
