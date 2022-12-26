@@ -26,14 +26,7 @@ export const Projects = () => {
     const isInView = useInView(ref, { once: true });
 
     return (
-        <div
-            ref={ref}
-            className="project-container"
-            style={{
-                transform: isInView ? "none" : "translateX(-20px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-            }}>
+        <div ref={ref} className="project-container">
             <div
                 className="project"
                 style={{
@@ -42,7 +35,13 @@ export const Projects = () => {
                     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
                 }}>
                 <img className="project-image" src={rojo} alt="rojo component library" />
-                <div className="project-content-container">
+                <div
+                    className="project-content-container"
+                    style={{
+                        transform: isInView ? "none" : "translateX(-20px)",
+                        opacity: isInView ? 1 : 0,
+                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    }}>
                     <h2 className="project-title">Rojo component library</h2>
                     <p className="project-text">{rojoText}</p>
                     <a
@@ -56,7 +55,13 @@ export const Projects = () => {
                 </div>
             </div>
 
-            <div className="project">
+            <div
+                className="project"
+                style={{
+                    transform: isInView ? "none" : "translateX(20px)",
+                    opacity: isInView ? 1 : 0,
+                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                }}>
                 <img className="project-image" src={aStar} alt="a star algorithm" />
                 <div className="project-content-container">
                     <h2 className="project-title">A-star algorithm</h2>
@@ -72,7 +77,13 @@ export const Projects = () => {
                 </div>
             </div>
 
-            <div className="project">
+            <div
+                className="project"
+                style={{
+                    transform: isInView ? "none" : "translateX(-20px)",
+                    opacity: isInView ? 1 : 0,
+                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                }}>
                 <img className="project-image" src={bachelor} alt="bachelor raport cover" />
                 <div className="project-content-container">
                     <h2 className="project-title">EEG for ALS Bachelor Thesis</h2>

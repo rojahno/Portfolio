@@ -32,6 +32,9 @@ export const Header = (props: HeaderProps) => {
                 behavior: "smooth",
             });
         }
+        if (isNavShowing) {
+            toggleNav();
+        }
     };
 
     const toggleNav = () => {
@@ -49,7 +52,13 @@ export const Header = (props: HeaderProps) => {
 
     return (
         <div className="header" ref={homeRef}>
-            <div className="title">Portfolio</div>
+            <div
+                className="title"
+                onClick={(e) => {
+                    scrollToRef(homeRef);
+                }}>
+                Portfolio
+            </div>
             <ul className="navbar" ref={dropdown}>
                 <div
                     className="nav"
