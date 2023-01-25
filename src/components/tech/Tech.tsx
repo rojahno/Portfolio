@@ -1,112 +1,97 @@
 import "./Tech.css";
-import cssIcon from "../../assets/css3.svg";
-import htmlIcon from "../../assets/html5.svg";
-import jsIcon from "../../assets/javascript.svg";
-import dockerICon from "../../assets/docker.svg";
-import javaIcon from "../../assets/java.svg";
-import reactIcon from "../../assets/reactjs.svg";
-import typescriptIcon from "../../assets/typescript.svg";
-import python from "../../assets/python.svg";
-import postsqlIcon from "../../assets/pgsql.svg";
 import { useRef, useState } from "react";
 import { useInView } from "framer-motion";
+import htmlIcon from "../../assets/html5.svg";
+import python from "../../assets/python.svg";
+import { WebTech } from "./WebTech";
+import { SoftwareTech } from "./SoftwareTech";
+import { techText } from "./TechText";
 
 export const Tech = () => {
-    const [currentIcon, setCurrentIcon] = useState<string>(htmlIcon);
-    // const [currentText, setCurrentText] = useState<string>("HTML");
-
-    const handleIconChange = (icon: string) => {
-        setCurrentIcon(icon);
-    };
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { once: true });
+    const [currentTab, setCurrentTab] = useState<number>(0);
+    const [currentIcon, setCurrentIcon] = useState<string>(htmlIcon);
+    const [currentTitle, setCurrentTitle] = useState<string>(techText.html[0]);
+    const [currentText, setCurrentText] = useState<string>(techText.html[1]);
+
+    function changeTab(tab: number) {
+        if (tab === 0) {
+            handleIconChange(htmlIcon, "html");
+            setCurrentTitle(techText.html[0]);
+            setCurrentText(techText.html[1]);
+        } else {
+            handleIconChange(python, "python");
+            setCurrentTitle(techText.python[0]);
+            setCurrentText(techText.python[1]);
+        }
+        setCurrentTab(tab);
+    }
+
+    function handleIconChange(icon: string, textKey: string) {
+        try {
+            if (Object.keys(techText).includes(textKey)) {
+                setCurrentIcon(icon);
+                let values = Object.values(techText);
+                let keys = Object.keys(techText);
+                let index = keys.indexOf(textKey);
+                setCurrentTitle(values[index][0]);
+                setCurrentText(values[index][1]);
+            } else {
+                throw new Error("Error: " + textKey + " not found in TechText.tsx");
+            }
+        } catch (e: any) {
+            console.error(e.message);
+        }
+    }
 
     return (
-        <div
-            ref={ref}
-            className="tech-container"
-            style={{
-                transform: isInView ? "none" : "translateX(-20px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-            }}>
-            <div className="main-icon-container">
-                <img className="main-icon" src={currentIcon} alt="html icon" />
+        <>
+            <div
+                ref={ref}
+                id="tech-container"
+                style={{
+                    transform: isInView ? "none" : "translateX(-20px)",
+                    opacity: isInView ? 1 : 0,
+                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                }}>
+                <div id="selector-tab">
+                    <div
+                        className="tech-tab"
+                        style={
+                            currentTab === 0
+                                ? {
+                                      background: "linear-gradient(45deg, #f14d5c, #f3903f, #fdc70c)",
+                                  }
+                                : {}
+                        }
+                        onClick={() => changeTab(0)}>
+                        Web
+                    </div>
+                    <div
+                        className="tech-tab"
+                        style={
+                            currentTab === 1
+                                ? {
+                                      background: "linear-gradient(45deg, #f14d5c, #f3903f, #fdc70c)",
+                                  }
+                                : {}
+                        }
+                        onClick={() => changeTab(1)}>
+                        Software
+                    </div>
+                </div>
+
+                <div className="main-icon-container">
+                    <div id="icon-container">
+                        <img className="main-icon" src={currentIcon} alt="html icon" />
+                        <h2 className="main-icon-title">{currentTitle}</h2>
+                    </div>
+                    <p className="main-icon-text">{currentText}</p>
+                </div>
+                <WebTech isVisable={currentTab === 1 ? false : true} handleIconChange={handleIconChange} />
+                <SoftwareTech isVisable={currentTab === 1 ? true : false} handleIconChange={handleIconChange} />
             </div>
-            <div className="tech">
-                <img
-                    className="tech-icon"
-                    src={htmlIcon}
-                    alt="html icon"
-                    onClick={(e) => {
-                        handleIconChange(htmlIcon);
-                    }}
-                />
-                <img
-                    className="tech-icon"
-                    src={cssIcon}
-                    alt="css icon"
-                    onClick={(e) => {
-                        handleIconChange(cssIcon);
-                    }}
-                />
-                <img
-                    className="tech-icon"
-                    src={typescriptIcon}
-                    alt="typescript icon"
-                    onClick={(e) => {
-                        handleIconChange(typescriptIcon);
-                    }}
-                />
-                <img
-                    className="tech-icon"
-                    src={jsIcon}
-                    alt="js icon"
-                    onClick={(e) => {
-                        handleIconChange(jsIcon);
-                    }}
-                />
-                <img
-                    className="tech-icon"
-                    src={reactIcon}
-                    alt="react icon"
-                    onClick={(e) => {
-                        handleIconChange(reactIcon);
-                    }}
-                />
-                <img
-                    className="tech-icon"
-                    src={python}
-                    alt="python icon"
-                    onClick={(e) => {
-                        handleIconChange(python);
-                    }}
-                />
-                <img
-                    className="tech-icon"
-                    src={javaIcon}
-                    alt="java icon"
-                    onClick={(e) => {
-                        handleIconChange(javaIcon);
-                    }}
-                />
-                <img
-                    className="tech-icon"
-                    src={postsqlIcon}
-                    alt="postsql icon"
-                    onClick={(e) => {
-                        handleIconChange(postsqlIcon);
-                    }}
-                />
-                <img
-                    className="tech-icon"
-                    src={dockerICon}
-                    alt="docker icon"
-                    onClick={(e) => {
-                        handleIconChange(dockerICon);
-                    }}
-                />
-            </div>
-        </div>
+        </>
     );
 };

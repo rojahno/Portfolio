@@ -1,14 +1,16 @@
-.profile {
+#profile {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 1.4em;
     animation: fadeIn 2s ease-in;
+    width: 100%;
+    max-width: 325px;
 }
 
-.profile:before,
-.profile > :first-child:before {
+#profile:before,
+#profile > :first-child:before {
     position: absolute;
     width: 80px;
     height: 80px;
@@ -18,7 +20,7 @@
     padding: 1em;
 }
 
-.profile:before {
+#profile:before {
     top: 0;
     left: 0;
     border-width: 1px 0 0 1px;
@@ -26,7 +28,7 @@
     animation: fadeInRight 2s ease-in-out;
 }
 
-.profile > :first-child:before {
+#profile > :first-child:before {
     bottom: 0;
     right: 0;
     border-width: 0 1px 1px 0;
@@ -34,17 +36,17 @@
     animation: fadeInLeft 2s ease-in-out;
 }
 
-.profile-container {
+#profile-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 }
 
-.profile-image {
+#profile-image {
     position: relative;
-    height: 7em;
-    width: 7em;
+    height: 5em;
+    width: 5em;
     border-radius: 50%;
     object-fit: cover;
     background-color: transparent;
@@ -55,7 +57,7 @@
     filter: grayscale(100%);
 }
 
-.img-container {
+#img-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -63,7 +65,7 @@
     align-items: center;
 }
 
-.profile-name {
+#profile-name {
     margin-left: 1em;
     font-size: 1.2rem;
     text-align: justify;
@@ -81,7 +83,7 @@
     -moz-text-fill-color: transparent;
 }
 
-.profile-title {
+#profile-title {
     margin-left: 1em;
     font-size: 1em;
     color: #ffbcff;
@@ -89,7 +91,7 @@
     justify-self: center;
 }
 
-.button-container {
+#button-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -98,24 +100,29 @@
     gap: 0.4em;
 }
 
-.profile-button {
+#profile-button {
     height: 2em;
     border-radius: 0.5em;
     border: solid 1px #fff;
 }
-.profile-button:hover {
+#profile-button:hover {
     transform: scale(1.05);
 }
 
 @media only screen and (min-width: 480px) {
-    .profile {
-        width: 480px;
+    #profile {
+        
+        max-width: 480px;
     }
-    .profile-name {
+    #profile-name {
         text-align: start;
     }
-    .profile-name {
+    #profile-name {
         font-size: 2em;
+    }
+    #profile-image {
+        height: 7em;
+        width: 7em;
     }
 }
 
