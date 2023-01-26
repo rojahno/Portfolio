@@ -6,6 +6,7 @@ interface HeaderProps {
     aboutMeRef: React.RefObject<HTMLDivElement>;
     techRef: React.RefObject<HTMLDivElement>;
     projectsRef: React.RefObject<HTMLDivElement>;
+    experienceRef: React.RefObject<HTMLDivElement>;
 }
 
 export const Header = (props: HeaderProps) => {
@@ -63,13 +64,6 @@ export const Header = (props: HeaderProps) => {
                 <div
                     className="nav"
                     onClick={(e) => {
-                        scrollToRef(homeRef);
-                    }}>
-                    Home
-                </div>
-                <div
-                    className="nav"
-                    onClick={(e) => {
                         scrollToRef(props.aboutMeRef);
                     }}>
                     About me
@@ -80,6 +74,13 @@ export const Header = (props: HeaderProps) => {
                         scrollToRef(props.techRef);
                     }}>
                     Technology
+                </div>
+                <div
+                    className="nav"
+                    onClick={(e) => {
+                        scrollToRef(props.experienceRef);
+                    }}>
+                    Experience
                 </div>
                 <div
                     className="nav"
@@ -100,13 +101,6 @@ export const Header = (props: HeaderProps) => {
                 <div
                     className="nav"
                     onClick={(e) => {
-                        scrollToRef(homeRef);
-                    }}>
-                    Home
-                </div>
-                <div
-                    className="nav"
-                    onClick={(e) => {
                         scrollToRef(props.aboutMeRef);
                     }}>
                     About me
@@ -117,6 +111,13 @@ export const Header = (props: HeaderProps) => {
                         scrollToRef(props.techRef);
                     }}>
                     Technology
+                </div>
+                <div
+                    className="nav"
+                    onClick={(e) => {
+                        scrollToRef(props.experienceRef);
+                    }}>
+                    Experience
                 </div>
                 <div
                     className="nav"
