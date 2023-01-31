@@ -71,16 +71,16 @@ export const Header = (props: HeaderProps) => {
                 <div
                     className="nav"
                     onClick={(e) => {
-                        scrollToRef(props.techRef);
+                        scrollToRef(props.experienceRef);
                     }}>
-                    Technology
+                    Experience
                 </div>
                 <div
                     className="nav"
                     onClick={(e) => {
-                        scrollToRef(props.experienceRef);
+                        scrollToRef(props.techRef);
                     }}>
-                    Experience
+                    Technology
                 </div>
                 <div
                     className="nav"
@@ -108,16 +108,16 @@ export const Header = (props: HeaderProps) => {
                 <div
                     className="nav"
                     onClick={(e) => {
-                        scrollToRef(props.techRef);
+                        scrollToRef(props.experienceRef);
                     }}>
-                    Technology
+                    Experience
                 </div>
                 <div
                     className="nav"
                     onClick={(e) => {
-                        scrollToRef(props.experienceRef);
+                        scrollToRef(props.techRef);
                     }}>
-                    Experience
+                    Technology
                 </div>
                 <div
                     className="nav"

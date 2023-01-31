@@ -32,16 +32,10 @@ export const Projects = () => {
                 style={{
                     transform: isInView ? "none" : "translateX(-20px)",
                     opacity: isInView ? 1 : 0,
-                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
                 }}>
                 <img className="project-image" src={rojo} alt="rojo component library" />
-                <div
-                    className="project-content-container"
-                    style={{
-                        transform: isInView ? "none" : "translateX(-20px)",
-                        opacity: isInView ? 1 : 0,
-                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-                    }}>
+                <div className="project-content-container">
                     <h2 className="project-title">Rojo component library</h2>
                     <p className="project-text">{rojoText}</p>
                     <a
@@ -60,7 +54,7 @@ export const Projects = () => {
                 style={{
                     transform: isInView ? "none" : "translateX(20px)",
                     opacity: isInView ? 1 : 0,
-                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s",
                 }}>
                 <img className="project-image" src={aStar} alt="a star algorithm" />
                 <div className="project-content-container">
@@ -82,7 +76,7 @@ export const Projects = () => {
                 style={{
                     transform: isInView ? "none" : "translateX(-20px)",
                     opacity: isInView ? 1 : 0,
-                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                    transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 2s",
                 }}>
                 <img className="project-image" src={bachelor} alt="bachelor raport cover" />
                 <div className="project-content-container">

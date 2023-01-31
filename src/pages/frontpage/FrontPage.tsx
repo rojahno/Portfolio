@@ -33,14 +33,15 @@ export const FrontPage = () => {
             </Layout>
 
             <Layout>
+                <Sectiontitle forwardedRef={experienceRef} text={"Experience"} />
+                <Experience />
+            </Layout>
+
+            <Layout>
                 <Sectiontitle forwardedRef={techRef} text={"Technology"} />
                 <Tech />
             </Layout>
 
-            <Layout>
-                <Sectiontitle forwardedRef={experienceRef} text={"Experience"} />
-                <Experience />
-            </Layout>
             <Layout>
                 <Sectiontitle forwardedRef={projectsRef} text={"Projects"} />
                 <Projects />

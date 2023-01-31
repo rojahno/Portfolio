@@ -1,42 +1,127 @@
+import { useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import { Accordion } from "../accordion/Accordion";
 import "./Experience.css";
 
 export const Experience = (props: any) => {
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref, { once: true });
+    const [activeAccordian, setActiveAccordian] = useState<number>(0);
+
+    const changeActiveAccordian = (index: number) => {
+        if (activeAccordian === index) {
+            setActiveAccordian(-1);
+        } else {
+            setActiveAccordian(index);
+        }
+    };
     return (
-        <div className="experiences">
+        <div className="experiences" ref={ref}>
             <div className="entries">
                 <div className="entry">
-                    <div className="experience-title">2023 </div>
-                    <p className="content">IT-consultant for Dfind</p>
+                    <Accordion
+                        year="2023"
+                        title="It consultant at Dfind"
+                        isInView={isInView}
+                        animationDelay={1.2}
+                        animatoionPixels={20}>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
+                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                        </p>
+                    </Accordion>
+                </div>
+                <div className="entry">
+                    <Accordion
+                        year="2023"
+                        title="Masters degree in computer science"
+                        isInView={isInView}
+                        animationDelay={1.4}
+                        animatoionPixels={-20}>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
+                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                        </p>
+                    </Accordion>
                 </div>
 
                 <div className="entry">
-                    <div className="experience-title">2023 </div>
-                    <p className="content">Masters degree in computer science</p>
+                    <Accordion
+                        year="2022"
+                        title="Summer intern for Bredvid"
+                        isInView={isInView}
+                        animationDelay={1.6}
+                        animatoionPixels={20}>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
+                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                        </p>
+                    </Accordion>
                 </div>
                 <div className="entry">
-                    <div className="experience-title">2022 </div>
-                    <p className="content">Summer intern for Bredvid</p>
-                </div>
-
-                <div className="entry">
-                    <div className="experience-title">2021 </div>
-                    <p className="content">Bachelors degree in computer science</p>
-                </div>
-                <div className="entry">
-                    <div className="experience-title">2019-2021</div>
-                    <p className="content">Programmer at Multilux</p>
-                </div>
-                <div className="entry">
-                    <div className="experience-title">2018</div>
-                    <p className="content">Civil guard in the Norwegian intelligence service</p>
+                    <Accordion
+                        year="2021"
+                        title="Bachelors degree in computer science"
+                        isInView={isInView}
+                        animationDelay={1.8}
+                        animatoionPixels={-20}>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
+                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                        </p>
+                    </Accordion>
                 </div>
                 <div className="entry">
-                    <div className="experience-title">2017</div>
-                    <p className="content">Military policy at the norwegian army</p>
+                    <Accordion
+                        year="2019-2021"
+                        title="Programmer at Multilux"
+                        isInView={isInView}
+                        animationDelay={2}
+                        animatoionPixels={20}>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
+                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                        </p>
+                    </Accordion>
                 </div>
                 <div className="entry">
-                    <div className="experience-title">2012-2016</div>
-                    <p className="content">Retail work at Spar Kaldnes</p>
+                    <Accordion
+                        year="2018"
+                        title="Civil guard in the Norwegian intelligence service"
+                        isInView={isInView}
+                        animationDelay={2.2}
+                        animatoionPixels={-20}>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
+                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                        </p>
+                    </Accordion>
+                </div>
+                <div className="entry">
+                    <Accordion
+                        year="2017"
+                        title="Military policy at the Norwegian army"
+                        isInView={isInView}
+                        animationDelay={2.4}
+                        animatoionPixels={20}>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
+                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                        </p>
+                    </Accordion>
+                </div>
+                <div className="entry">
+                    <Accordion
+                        year="2012-2016"
+                        title="Retail work at Spar Kaldnes"
+                        isInView={isInView}
+                        animationDelay={2.6}
+                        animatoionPixels={-20}>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
+                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                        </p>
+                    </Accordion>
                 </div>
             </div>
         </div>
