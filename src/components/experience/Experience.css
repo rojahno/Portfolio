@@ -60,7 +60,7 @@
         margin: 0;
     }
     .entries .entry:nth-child(even) {
-        background:none;
+        background: none;
     }
     .experiences .entry:nth-child(2n) {
         border: none;

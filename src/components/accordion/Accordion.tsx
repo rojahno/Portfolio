@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-import arrow from "../../assets/arrow.svg";
+import { useRef, useState } from "react";
 import "./Accordion.css";
 
 interface AccordionProps {
