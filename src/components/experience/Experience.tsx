@@ -1,20 +1,12 @@
 import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Accordion } from "../accordion/Accordion";
 import "./Experience.css";
 
-export const Experience = (props: any) => {
+export const Experience = () => {
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, { once: true });
-    const [activeAccordian, setActiveAccordian] = useState<number>(0);
 
-    const changeActiveAccordian = (index: number) => {
-        if (activeAccordian === index) {
-            setActiveAccordian(-1);
-        } else {
-            setActiveAccordian(index);
-        }
-    };
     return (
         <div className="experiences" ref={ref}>
             <div className="entries">
