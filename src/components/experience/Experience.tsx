@@ -105,7 +105,7 @@ export const Experience = () => {
                 <div className="entry">
                     <Accordion
                         year="2012-2016"
-                        title="Retail work at Spar Kaldnes"
+                        title="Retail worker at Spar Kaldnes"
                         isInView={isInView}
                         animationDelay={2.6}
                         animatoionPixels={-20}>

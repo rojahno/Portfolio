@@ -63,7 +63,7 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid #f3903f;
-    transition: transform 0.3s linear;
+    transition: transform 0.3s ease;
     bottom: 10%;
     right: 50%;
 }
