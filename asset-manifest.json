@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.aff5da2e.css",
-    "main.js": "/Portfolio/static/js/main.2a7f7232.js",
+    "main.css": "/Portfolio/static/css/main.15f18541.css",
+    "main.js": "/Portfolio/static/js/main.8f96a40f.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/rojo.png": "/Portfolio/static/media/rojo.241493c53d369f743633.png",
     "static/media/bachelor.png": "/Portfolio/static/media/bachelor.1321d9e54c64f1e59078.png",
     "static/media/aStar.png": "/Portfolio/static/media/aStar.e22ca17d5b71b8513e37.png",
+    "static/media/profile_picture.jpeg": "/Portfolio/static/media/profile_picture.22fc86240ceae0993a64.jpeg",
     "static/media/prettierIcon.svg": "/Portfolio/static/media/prettierIcon.e2b5ad93628d06b62d455412ac6a7f70.svg",
     "static/media/androidIcon.svg": "/Portfolio/static/media/androidIcon.6e690a4b7013747c10fff98223db4393.svg",
     "static/media/pgsql.svg": "/Portfolio/static/media/pgsql.00c30ec38b86d1de1b5ddc53414d2f1f.svg",
@@ -34,12 +35,12 @@
     "static/media/css3.svg": "/Portfolio/static/media/css3.9882e252f3baf8b8d57642a1384d8ba3.svg",
     "static/media/linkedin.svg": "/Portfolio/static/media/linkedin.b174b7301cf82652433a636f9c1bd6cd.svg",
     "static/media/vueIcon.svg": "/Portfolio/static/media/vueIcon.2b520303788d88b4e0c3776cd07cd61f.svg",
-    "main.aff5da2e.css.map": "/Portfolio/static/css/main.aff5da2e.css.map",
-    "main.2a7f7232.js.map": "/Portfolio/static/js/main.2a7f7232.js.map",
+    "main.15f18541.css.map": "/Portfolio/static/css/main.15f18541.css.map",
+    "main.8f96a40f.js.map": "/Portfolio/static/js/main.8f96a40f.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aff5da2e.css",
-    "static/js/main.2a7f7232.js"
+    "static/css/main.15f18541.css",
+    "static/js/main.8f96a40f.js"
   ]
 }
