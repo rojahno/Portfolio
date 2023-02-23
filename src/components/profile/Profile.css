@@ -67,7 +67,7 @@
 
 #profile-name {
     margin-left: 1em;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     text-align: justify;
     width: 100%;
     text-overflow: inherit;
@@ -113,6 +113,7 @@
         max-width: 480px;
     }
     #profile-name {
+        font-size: 1.2em;
         text-align: start;
     }
     #profile-name {

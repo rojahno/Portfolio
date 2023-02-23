@@ -1,5 +1,4 @@
 import "./SectionTitle.css";
-import { useRef } from "react";
 import { useInView } from "framer-motion";
 interface TitleProps {
     text?: React.ReactNode;

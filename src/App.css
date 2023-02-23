@@ -4,19 +4,13 @@
     box-sizing: border-box;
 }
 
-body {
-    /* font-family: "Anton", sans-serif; */
-    font-family: "Ubuntu", sans-serif;
-    color: #ffffffee;
-    background-color: #1d1d20;
-    opacity: 0.8;
-}
 a {
     color: #333366;
     text-decoration: none;
 }
 
 p {
+    color: white;
     overflow-wrap: break-word;
     text-align: justify;
     font-size: 1rem;
