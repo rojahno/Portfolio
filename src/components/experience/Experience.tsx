@@ -13,26 +13,13 @@ export const Experience = () => {
                 <div className="entry">
                     <Accordion
                         year="2023"
-                        title="It consultant at Dfind"
-                        isInView={isInView}
-                        animationDelay={1.2}
-                        animatoionPixels={20}>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
-                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
-                        </p>
-                    </Accordion>
-                </div>
-                <div className="entry">
-                    <Accordion
-                        year="2023"
                         title="Masters degree in computer science"
                         isInView={isInView}
                         animationDelay={1.4}
                         animatoionPixels={-20}>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
-                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                            Finished a master's degree from NTNU in Trondheim, Norway. The master's degree is in
+                            computer science with a specialization in artificial intelligence.
                         </p>
                     </Accordion>
                 </div>
@@ -45,8 +32,7 @@ export const Experience = () => {
                         animationDelay={1.6}
                         animatoionPixels={20}>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
-                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                        Worked as an IT consultant for Bredvid. My tasks involved creating a web portal with stacks such as React, Kotlin, and Azure. 
                         </p>
                     </Accordion>
                 </div>
@@ -58,8 +44,7 @@ export const Experience = () => {
                         animationDelay={1.8}
                         animatoionPixels={-20}>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
-                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                            Finished a bachelor's degree from NTNU in Ålesund, Norway.
                         </p>
                     </Accordion>
                 </div>
@@ -71,21 +56,9 @@ export const Experience = () => {
                         animationDelay={2}
                         animatoionPixels={20}>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
-                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
-                        </p>
-                    </Accordion>
-                </div>
-                <div className="entry">
-                    <Accordion
-                        year="2018"
-                        title="Civil guard in the Norwegian intelligence service"
-                        isInView={isInView}
-                        animationDelay={2.2}
-                        animatoionPixels={-20}>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
-                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                        I worked as a programmer for Multilux on their CitySight-project. I was involved in developing a smart-city 
+                        solution where the main goal of the project was to make it easier for municipalities to control street lights and 
+                        save energy through the use of sensors. 
                         </p>
                     </Accordion>
                 </div>
@@ -97,8 +70,7 @@ export const Experience = () => {
                         animationDelay={2.4}
                         animatoionPixels={20}>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint ipsa provident
-                            cupiditate, molestiae debitis consequuntur aspernatur voluptatum aperiam perferendis.
+                        Worked as a military police soldier at Haakonsvern, Bergen.
                         </p>
                     </Accordion>
                 </div>

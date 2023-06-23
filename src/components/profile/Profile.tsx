@@ -25,9 +25,9 @@ export const Profile = () => {
                 })
                 .join("");
             iteration += 1 / 4;
-
             return newName;
         }
+
         function beginScrambling() {
             let interval = setInterval(() => {
                 if (nameRef.current) {
